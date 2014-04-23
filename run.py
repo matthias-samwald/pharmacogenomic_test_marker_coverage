@@ -494,7 +494,7 @@ for gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT',
 assay_allele_coverage = convert_nested_dd(assay_allele_coverage) # convert to native dictionary
           
 # TODO: for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
-for currently_processed_gene in ['UGT1A1']:
+for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
     
     print("Started processing data on " + currently_processed_gene)
     
@@ -506,15 +506,15 @@ for currently_processed_gene in ['UGT1A1']:
     vcf_reader = vcf.Reader(open('1000genomes/' + currently_processed_gene, 'r')) 
     
     for record in vcf_reader:
-        for call in record.samples:
-            #print(record.ID + " " + str(call.sample) + " " + call.gt_bases)
-            thousand_genome_samples[str(call.sample)][currently_processed_gene]['maternal_haplotype']['snps'][record.ID] = call.gt_bases.split("|")[0] # first variant is arbitrarily named 'maternal'
-            thousand_genome_samples[str(call.sample)][currently_processed_gene]['paternal_haplotype']['snps'][record.ID] = call.gt_bases.split("|")[1] # second variant is arbitrarily named 'paternal'
-    
-            # create empty structure to hold allele information inferred later on
-            for assay in list_of_assays:
-                for maternal_or_paternal_haplotype in ['maternal_haplotype', 'paternal_haplotype']:
-                    thousand_genome_samples[str(call.sample)][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay] = set()
+        if record.ID in assay_rsid_coverage['hypothetical_assay_covering_all_rsids_in_pharmgkb']:
+            for call in record.samples:
+                thousand_genome_samples[str(call.sample)][currently_processed_gene]['maternal_haplotype']['snps'][record.ID] = call.gt_bases.split("|")[0] # first variant is arbitrarily named 'maternal'
+                thousand_genome_samples[str(call.sample)][currently_processed_gene]['paternal_haplotype']['snps'][record.ID] = call.gt_bases.split("|")[1] # second variant is arbitrarily named 'paternal'
+        
+                # create empty structure to hold allele information inferred later on
+                for assay in list_of_assays:
+                    for maternal_or_paternal_haplotype in ['maternal_haplotype', 'paternal_haplotype']:
+                        thousand_genome_samples[str(call.sample)][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay] = set()
     
     thousand_genome_samples = convert_nested_dd(thousand_genome_samples) # convert to native dictionary
     
@@ -657,6 +657,11 @@ Generate statistics
     
     
     # show alleles called 
+    print('''
+    
+    SNP variant counts in gene definitions and in sample data.
+    
+    ''')
     
     # display header row
     output_line = "sample" + "\t" + "gene" + "\t" + "maternal_or_paternal_haplotype"
