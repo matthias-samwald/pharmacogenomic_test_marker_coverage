@@ -1,0 +1,24 @@
+Haplotype	taqman	veracode_adme_corepanel	IPLEX ADME PGX PANEL	dmet_plus	florida_stanford_chip
+*1		(assumed)	x	(assumed)	(assumed)
+*2		x	x		x
+*3			x	x	x
+VKORC1_c.*131C>A(3'UTR)				x	
+VKORC1_c.383T>G(L128R)				x	
+VKORC1_c.358C>T(L120L)				x	
+VKORC1_c.292C>T(R98W)				x	
+VKORC1_c.284-882A>T				x	
+VKORC1_c.283+837C>T				x	
+VKORC1_c.283+231G>A				x	
+VKORC1_c.283+186T>C				x	
+VKORC1_c.283+124G>C				x	
+VKORC1_c.196G>A(V66M)				x	
+VKORC1_c.174-136C>T				x	x
+VKORC1_c.174-429C>T				x	
+*4			x	x	
+VKORC1_c.173+486C>A				x	
+VKORC1_c.173+324T>G				x	
+VKORC1_c.172A>G(R58G)				x	
+VKORC1_c.134T>C(V45A)				x	
+VKORC1_c.85G>T(V29L)				x	
+VKORC1_c.-1877A>G(Promoter)				x	
+VKORC1_c.-5014T>C(Promoter)				x	

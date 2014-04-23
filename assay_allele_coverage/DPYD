@@ -1,0 +1,30 @@
+Haplotype	taqman	veracode_adme_corepanel	IPLEX ADME PGX PANEL	dmet_plus	florida_stanford_chip
+*1	(assumed)	(assumed)	x	(assumed)	(assumed)
+*2	(x)	(x)	x	x	(x)
+*2A	x	x	(x)	(x)	(x)
+*2B			(x)	(x)	
+*3				x	
+*4				x	
+*5					
+*6					
+*7	x	x	x	x	
+*8	x	x	x	x	
+*9	(x)	(x)	x	(x)	
+*9A	x	x	(x)	(x)	
+*9B	x	x	(x)	x	
+*10	x	x	x	x	
+*11				x	
+*12					
+*13				x	
+DPYD_c.61C>T(R21X)				x	
+DPYD_c.496A>G(M166V)				x	
+DPYD_c.525G>A(S175S)				x	
+DPYD_c.756T>C(G252G)				x	
+DPYD_c.1035T>C(F345F)				x	
+DPYD_c.1074T>A(R358R)				x	
+DPYD_c.1896T>C(F632F)				x	
+DPYD_c.1905C>T(N635N)				x	
+					
+DPYD IVS10-15T>C					
+DPYD 1156G>T					
+DPYD 1845G>T					

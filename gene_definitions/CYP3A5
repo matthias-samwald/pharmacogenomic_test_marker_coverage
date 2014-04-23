@@ -1,0 +1,25 @@
+gene	superclass	haplotype	rs776746	rs10264272	rs28365083	rs28365085	rs28383468	rs28383479	rs41279854	rs41303343	rs55817950	rs56244447	rs56411402	rs72552791	-86G>A	-74C>T	3709_3710 insG	12952T>C	13108T>C	16903A>G	17163G>T	27050A>G	29782A>G	31611C>T
+CYP3A5		*1	T	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5	*1	*1B	T	C	G	A	G	C	A	T	G	A	T	T	T [tag]	G	del	A	A	T	C	T	T	G
+CYP3A5	*1	*1C	T	C	G	A	G	C	A	T	G	A	T	T	C	A [tag]	del	A	A	T	C	T	T	G
+CYP3A5	*1	*1D	T	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	A [tag]
+CYP3A5	*1	*1E	T	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	A [tag]	T	T	G
+CYP3A5		*2	T	C	T [tag]	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*3	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	A [tag]
+CYP3A5	*3	*3B	C [tag]	C	G	A	A [tag]	C	A	T	G	A	T	T	C	G	C [tag]	A	A	T	C	T	T	A [tag]
+CYP3A5	*3	*3C	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5	*3	*3D	C [tag]	C	G	A	G	C	A	T	G	C [tag]	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5	*3	*3E	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	C [tag]	T	A [tag]
+CYP3A5	*3	*3F	C [tag]	C	G	G [tag]	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	A [tag]
+CYP3A5	*3	*3G	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	G [tag]	A	T	C	T	T	A [tag]
+CYP3A5	*3	*3H	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	G [tag]	T	C	T	T	A [tag]
+CYP3A5	*3	*3I	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	C [tag]	C	T	T	A [tag]
+CYP3A5	*3	*3J	C [tag]	C	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	C [tag]	A [tag]
+CYP3A5	*3	*3K	C [tag]	C	G	A	G	C	G [tag]	T	G	A	T	T	C	G	del	A	A	T	C	T	T	A [tag]
+CYP3A5	*3	*3L	C [tag]	C	G	A	G	C	A	T	G	A	T	C [tag]	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*4	T	C	G	A	G	C	A	T	G	A	C [tag]	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*5	T	C	G	A	G	C	A	T	G	A	T	T	C	G	del	G [tag]	A	T	C	T	T	G
+CYP3A5		*6	T	T [tag]	G	A	G	C	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*7	T	C	G	A	G	C	A	TA	G	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*8	T	C	G	A	G	C	A	T	A [tag]	A	T	T	C	G	del	A	A	T	C	T	T	G
+CYP3A5		*9	T/C [tag]	C	G	A	G	T [tag]	A	T	G	A	T	T	C	G	del	A	A	T	C	T	T	G

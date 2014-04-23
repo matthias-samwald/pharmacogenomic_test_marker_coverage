@@ -1,0 +1,74 @@
+Haplotype	taqman	veracode_adme_corepanel	IPLEX ADME PGX PANEL	dmet_plus	florida_stanford_chip
+*1	(assumed)	(assumed)	x	(assumed)	(assumed)
+*1A			(x)		
+*1B			(x)		
+*1C			(x)		
+*1D			(x)		
+*2	x	x	x	x	x
+*2A	(x)	(x)	(x)	(x)	(x)
+*2B	(x)	(x)	(x)	(x)	(x)
+*2C	(x)	(x)	(x)	(x)	(x)
+*3	x	x	x	x	x
+*3A	(x)	(x)	(x)	(x)	(x)
+*3B	(x)	(x)	(x)	(x)	(x)
+*4		x	x	x	
+*5	x	x	x	x	x
+*6	x	x	x	x	
+*7					
+*8	x*	x	x		x
+*9	x	x	x	x	
+*10	x	x	x	x	
+*11	x	x	x	x	x
+*11A	(x)	(x)	(x)	(x)	(x)
+*11B	(x)	(x)	(x)	(x)	(x)
+*12	x	x	x	x	
+*13	x	x	x	x	
+*14				x	
+*15	x	x	x	x	
+*16				x	
+*17					
+*18			(x)		
+*19					
+*20					
+*21					
+*22					
+*23					
+*24					
+*25	x	x	x	x	
+*26					
+*27	x*		x		
+*28					
+*29					
+*30					
+*31					
+*32					
+*33					
+*34					
+*35					
+*36					
+*37					
+*38					
+*39					
+*40					
+*41					
+*42					
+*43					
+*44					
+*45					
+*46					
+*47					
+*48					
+*49					
+*50					
+*51					
+*52					
+*53					
+*54					
+*55					
+*56					
+*57					
+*58					
+CYP2C9_5080C>A(L19I)				x	
+CYP2C9_42612A>G(Y358C)				x	
+CYP2C9_55221C>T(A441A)				x	
+CYP2C9_55323A>T(G475G)				x	

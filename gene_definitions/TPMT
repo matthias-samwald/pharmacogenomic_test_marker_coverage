@@ -1,0 +1,43 @@
+gene	superclass	haplotype	rs72552742	rs9333569	rs9333570	rs144041067	124C>G	211G>A	106G>A	rs150900439	rs200591577	488G>C	rs74423290	rs6921269	634T>C	rs3931660	rs12529220	rs2518463	rs2842934	minus 178C>T	365A>C	rs72556347	319T>G	349G>C	rs267607275	rs79901429	rs115106679	rs112339338	rs111901354	200T>C	595G>A
+TPMT		*1	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*1	*1A	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	A [tag]	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*1	*1S	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	G [tag]	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*2	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*3	*3A	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*3	*3B	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*3	*3C	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*3	*3D	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT	*3	*3E	T	T	C	C	G	C	C	T	G	C	G	C	A	T [tag]	A [tag]	G [tag]	G [tag]	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*4	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*5	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*6	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*7	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*8	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*9	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*10	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*11	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*12	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*13	A [tag]	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*14	T	C [tag]	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*15	T	T	T [tag]	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*16	T	T	C	T [tag]	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*17	T	T	C	C	C [tag]	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*18	T	T	C	C	G	T [tag]	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*19	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	G [tag]	A	A	C	A	A	C	G	G	A	C
+TPMT		*20	T	T	C	C	G	C	C	C [tag]	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*21	T	T	C	C	G	C	C	T	C [tag]	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*22	T	T	C	C	G	C	C	T	G	G [tag]	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*23	T	T	C	C	G	C	C	T	G	C	C [tag]	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*24	T	T	C	C	G	C	C	T	G	C	G	A [tag]	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*25	T	T	C	C	G	C	C	T	G	C	G	C	G [tag]	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*26	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	G [tag]	A	C	A	A	C	G	G	A	C
+TPMT		*27	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	C [tag]	C	A	A	C	G	G	A	C
+TPMT		*28	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	G [tag]	A	A	C	G	G	A	C
+TPMT		*29	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	G [tag]	A	C	G	G	A	C
+TPMT		*30	T	T	C	C	G	C	T [tag]	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	C
+TPMT		*31	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	G [tag]	C	G	G	A	C
+TPMT		*32	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	T [tag]	G	G	A	C
+TPMT		*33	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	A [tag]	G	A	C
+TPMT		*34	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	A [tag]	A	C
+TPMT		*35	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	G [tag]	C
+TPMT		*36	T	T	C	C	G	C	C	T	G	C	G	C	A	A	T	A	A	G	T	A	A	C	A	A	C	G	G	A	T [tag]

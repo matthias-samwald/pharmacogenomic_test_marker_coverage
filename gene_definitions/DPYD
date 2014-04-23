@@ -1,0 +1,16 @@
+gene	superclass	haplotype	rs3918290 	rs72549303	rs1801158 	rs1801159	rs1801160	rs72549309	rs1801266	rs1801265 	rs1801267	rs1801268	rs72549306 	rs80081766	rs78060119	rs55886062
+DPYD		*1	C	G	C	T	C	A	G	A	C	C	C	C	C	A
+DPYD	*2	*2A	T	G	C	T	C	A	G	A	C	C	C	C	C	A
+DPYD	*2	*2B	T	G	C	C	C	A	G	A	C	C	C	C	C	A
+DPYD		*3	C	del	C	T	C	A	G	A	C	C	C	C	C	A
+DPYD		*4	C	G	T [tag]	T	C	A	G	A	C	C	C	C	C	A
+DPYD		*5	C	G	C	C	C	A	G	A	C	C	C	C	C	A
+DPYD		*6	C	G	C	T	T [tag]	A	G	A	C	C	C	C	C	A
+DPYD		*7	C	G	C	T	C	del [tag]	G	A	C	C	C	C	C	A
+DPYD		*8	C	G	C	T	C	A	A [tag]	A	C	C	C	C	C	A
+DPYD	*9	*9A	C	G	C	T	C	A	G	G	C	C	C	C	C	A
+DPYD	*9	*9B	C	G	C	T	C	A	G	G	T [tag]	C	C	C	C	A
+DPYD		*10	C	G	C	T	C	A	G	A	C	A [tag]	C	C	C	A
+DPYD		*11	C	G	C	T	C	A	G	A	C	C	A [tag]	C	C	A
+DPYD		*12	C	G	C	T	C	A	G	A	C	C	C	T	A	A
+DPYD		*13	C	G	C	T	C	A	G	A	C	C	C	C	C	C [tag]

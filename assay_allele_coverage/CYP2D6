@@ -1,0 +1,127 @@
+Haplotype	taqman	veracode_adme_corepanel	IPLEX ADME PGX PANEL	dmet_plus	florida_stanford_chip
+*1	(assumed)	(assumed)	(assumed)	(assumed)	(assumed)
+*1A			x		
+*1B					
+*1C					
+*1D					
+*1E					
+*1XN					
+*2	(x)	(x)	(x)		
+*2A	x	x	(x)		
+*2B					
+*2C					
+*2D					
+*2E					
+*2F					
+*2G					
+*2H					
+*2J					
+*2K					
+*2L			(x)		
+*2M					
+*2XN					
+*3	x	x	x	x	
+*3A	(x)	(x)	(x)	(x)	
+*3B	(x)	(x)	(x)	(x)	
+*4	x	x	x	x	x
+*4A	(x)	(x)	(x)	(x)	(x)
+*4B	(x)	(x)	(x)	(x)	(x)
+*4C	(x)	(x)	(x)	(x)	(x)
+*4D	(x)	(x)	(x)	(x)	(x)
+*4E	(x)	(x)	(x)	(x)	(x)
+*4F	(x)	(x)	(x)	(x)	(x)
+*4G	(x)	(x)	(x)	(x)	(x)
+*4H	(x)	(x)	(x)	(x)	(x)
+*4J	(x)	(x)	(x)	(x)	(x)
+*4K	(x)	(x)	(x)	(x)	(x)
+*4L	(x)	(x)	(x)	(x)	(x)
+*4M	(x)	(x)	x	(x)	(x)
+*4N	(x)	(x)	(x)	(x)	(x)
+*4P	(x)	(x)	(x)	(x)	(x)
+*4X2	(x)	(x)	(x)	(x)	
+*5		x			
+*6	x	x	x	x	x
+*6A	(x)	(x)	(x)	(x)	(x)
+*6B	(x)	(x)	(x)	(x)	(x)
+*6C	(x)	(x)	(x)	(x)	(x)
+*6D	(x)	(x)	(x)	(x)	(x)
+*7	x	x	x	x	x
+*8	x*	x	x	x	
+*9	x	x	x	x	
+*9x2					
+*10	x	x	x		x
+*10A	(x)	(x)	(x)		(x)
+*10B	(x)	(x)	(x)		(x)
+*10C	(x)	(x)	(x)		(x)
+*10D	(x)	(x)	(x)		(x)
+*10X2	(x)	(x)	(x)		
+*11	x	x	x	x	
+*12	x	x	x	x	x
+*13					
+*14	x	x	(x)	x	
+*14A	(x)*	(x)	x	(x)	
+*14B	(x)*	(x)	x	(x)	
+*15	x	x	x	x	
+*16					
+*17	(x)	(x)	x		
+*17XN	(x)	(x)			
+*18	x	x	x	x	
+*19	x	x	x	x	
+*20	x	x	x	x	
+*21		x	(x)	x	
+*21A		(x)	x	(x)	
+*21B		(x)	x	(x)	
+*22					
+*23					
+*24					
+*25					
+*26					
+*27					
+*28					
+*29				x	
+*30			x		
+*31			(x)		
+*32					
+*33					
+*34					
+*35			(x)		
+*36			(x)		
+*37			(x)		
+*38	x	x		x	
+*39					
+*40	x		x	x	
+*41	x	x	x	x	x
+*42	x	x	x	x	
+*44	x	x	x	x	
+*45					
+*46					
+*47			(x)		
+*48					
+*49			(x)		
+*50					
+*51			(x)		
+*52			(x)		
+*53					
+*54			(x)		
+*55					
+*56	x	x	(x)	x	
+*56A	(x)	(x)	x	(x)	
+*56B	(x)	(x)	x	(x)	
+*57			(x)		
+*58			x		
+*59					
+*62					
+*64			x		
+*65			(x)		
+*69			x		
+*71			(x)		
+*72			(x)		
+CYP2D6_-2178G>A				x	
+CYP2D6_-1961C>G>A				x	
+CYP2D6_-1770G>A				x	
+CYP2D6_-1584C>G				x	
+CYP2D6_100C>T(P34S)				x	
+CYP2D6_1023C>T(T107I)				x	x
+CYP2D6_1661G>C(V136V)				x	
+CYP2D6_2850C>T(R296C)				x	
+CYP2D6_4180G>C(S486T)				x	

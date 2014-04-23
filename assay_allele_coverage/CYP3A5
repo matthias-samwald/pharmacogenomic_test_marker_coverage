@@ -1,0 +1,30 @@
+Haplotype	taqman	veracode_adme_corepanel	IPLEX ADME PGX PANEL	dmet_plus	florida_stanford_chip
+*1	(assumed)	(assumed)	x	(assumed)	(assumed)
+*1A			(x)		
+*1B			(x)		
+*1C			(x)		
+*1D			(x)		
+*1E			(x)		
+*2				x	
+*3	x	x	x	(x)	x
+*3A	(x)	(x)	(x)	(x)	(x)
+*3B	(x)	(x)	(x)	x	(x)
+*3C	(x)	(x)	(x)	(x)	(x)
+*3D	(x)	(x)	(x)	x	(x)
+*3E	(x)	(x)	(x)	(x)	(x)
+*3F	(x)	(x)	(x)	x	(x)
+*3G	(x)	(x)	(x)	(x)	(x)
+*3H	(x)	(x)	(x)	(x)	(x)
+*3I	(x)	(x)	(x)	(x)	(x)
+*3J	(x)	(x)	(x)	(x)	(x)
+*3K	x	x	x	x	(x)
+*3L	(x)	(x)	(x)	x	(x)
+*4				x	
+*5	x	x	x	x	
+*6	x	x	x	x	x
+*7	x	x	x	x	
+*8				x	
+*9				x	
+*10	x	x	x	x	
+*11	(x)	(x)	(x)	x	
+CYP3A5_7303C>A(S100Y)				x	

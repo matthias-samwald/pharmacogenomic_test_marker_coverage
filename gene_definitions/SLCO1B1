@@ -1,0 +1,40 @@
+gene	superclass	haplotype	rs139257324	rs373327528	rs56101265	rs56061388	rs2306283	rs11045818	rs2306282	rs11045819	rs72559745	rs4149056	rs4149057	rs72559746	rs2291075	rs79135870	rs11045852	rs11045853	rs55901008	chr12:21355487(hg19)	rs59113707	rs56387224	rs142965323	rs72559748	rs59502379	rs34671512	rs56199088	rs55737008	rs200995543	rs140790673
+SLCO1B1		*1	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1	*1	*1A	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1	*1	*1B	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1	*1	*1C	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*2	C	G	 [tag]	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*3	C	G	T	C  [tag]	A	G	A	C	G [tag]	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*4	C	G	T	T	A	G	A	A  [tag]	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*5	C	G	T	T	A	G	A	C	A	C  [tag]	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*6	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	C  [tag]	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*7	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	G  [tag]	G	A	G	A	A	A	C	C
+SLCO1B1		*8	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	G  [tag]	G	A	A	A	C	C
+SLCO1B1		*9	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	C  [tag]	A	A	A	C	C
+SLCO1B1		*10	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	G  [tag]	A	C	C
+SLCO1B1		*11	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	G  [tag]	C	C
+SLCO1B1		*12	C	G	C  [tag]	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	G  [tag]	A	C	C
+SLCO1B1		*13	C	G	T	C  [tag]	A	G	A	C	G  [tag]	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	G  [tag]	C	C
+SLCO1B1		*14	C	G	T	T	G  [tag]	G	A	A  [tag]	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*15	C	G	T	T	G  [tag]	G	A	C	A	C  [tag]	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*16	C	G	T	T	A	G	G [tag]	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*17	C	G	T	T	G  [tag]	G	A	C	A	C  [tag]	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*18	C	G	T	T	G  [tag]	A [tag]	A	A  [tag]	A	T	C [tag]	G [tag]	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*19	C	G	T	T	A	G	A	C	A	T	C [tag]	T	C	A	A	G	T	T	C	A	G	A	G	C  [tag]	A	A	C	C
+SLCO1B1		*20	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	T [tag]	A	A	G	T	T	C	A	G	A	G	C  [tag]	A	A	C	C
+SLCO1B1		*21	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	T [tag]	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*22	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	C  [tag]	A	A	C	C
+SLCO1B1		*23	C	A  [tag]	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*24	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	G  [tag]	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*25	C	G	T	T	G  [tag]	G	A	A  [tag]	A	T	T	T	C	A	G  [tag]	A  [tag]	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*26	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	A [tag]	A	G	A	A	A	C	C
+SLCO1B1		*27	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	A	G	T	T	G  [tag]	A	G	A	G	A	A	A	C	C
+SLCO1B1		*28	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	G  [tag]	A  [tag]	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*29	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	C	T  [tag]
+SLCO1B1		*30	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	G  [tag]	A	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*31	C	G	T	T	G  [tag]	G	A	C	A	T	T	T		A	A	G	T	T	C	A	G	A	C  [tag]	A	A	A	C	C
+SLCO1B1		*32	C	G	T	T	G  [tag]	G	A	A  [tag]	A	T	T	T	C	A	G  [tag]	G	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*33	G [tag]	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	G  [tag]	 [tag]	T	T	C	A	G	A	G	A	A	A	C	C
+SLCO1B1		*34	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	A	A	A	T  [tag]	C
+SLCO1B1		*35	C	G	T	T	G  [tag]	G	A	C	A	T	T	T	C	A	A	G	T	T	C	A	G	A	G	C  [tag]	A	A	C	C
+SLCO1B1		*36	C	G	T	T	A	G	A	C	A	T	T	T	C	A	A	G	T	G  [tag]	C	A	G	A	G	A	A	A	C	C
