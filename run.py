@@ -14,14 +14,13 @@ def convert_nested_dd(dd):
     '''Converts a nested defaultdict back into a native dictionary.
     '''
     return {k:convert_nested_dd(v) for k,v in dd.items()} if isinstance(dd, defaultdict) else dd
-
-def print_in_brackets(arg):
-    print(">>" + str(arg) + "<<")
     
 gene_definitions = AutoVivification()
 assay_rsid_coverage = dict()
 assay_allele_coverage = AutoVivification()
 haplotype_tables = dict()
+
+exemplary_1000genomes_record = 'HG00096' # a random pick among the 1000genome samples -- used to check which rsids are covered in the data and which are not
 
 assay_rsid_coverage['hypothetical_assay_covering_all_rsids_in_pharmgkb'] = set()
 assay_rsid_coverage['dmet_plus'] = set(line.strip() for line in open('data_about_assays/dmet_plus_rsids'))
@@ -112,7 +111,7 @@ CYP2C9        *34    A    A    C    A    C    C    T    T    C    G    T    AGAA
 """
 
 haplotype_tables["CYP2D6"] = """\
-gene    superclass    haplotype    rs1065852    rs16947    rs28371706    rs28371725    rs35742686    rs3892097    rs5030655    rs5030656    rs59421388    rs61736512    rs769258    rs28371696    rs5030862    rs28371703    rs28371704     rs1135822    rs1135823    rs28371710    rs1135824    rs5030866    rs28371717    rs5030867    rs28371733    rs1135840    rs72549357    rs78482768    2853A>C    -1770 G>A    '-1601_-1600GA>TT    -1584C>G    -1543 G>A    '-1426C>T     -1298G>A     -1258_-1257insAAAAA    -1253A>G    -1245_-1244insGA    -1238_-1237delAA     -1237_-1236insAA    -1235A>G    -1094_-1093insA    -1028T>C    -1011T>C     -1000G>A    -750_-749delGA    -740C>T    -695_-692delTGTG    -678G>A     -629A>G    -377A>G    '-175G>A    19G>A    73C>T    82C>T    125G>A     214G>C     221C>A     223C>G     227T>C    310G>T     601delC     746C>G     843T>G    883G>C    887C>T    957C>T    972C>T    997C>G    1013G>A    1039C>T    1062A>G    1494T>C    1513C>T    1598A>G    1608G>A     [tag]    1720A>C    1724C>T    1757C>T    rs5030865     1858C>T    1863_1864ins(TTTCGCCCC)    1863_1864ins(TTTCGCCCC)2    1869T>C    1887insTA    1943G>A    1973_1974insG    1978C>T    1979T>C    2097A>G    2129A>C    2291G>A    2303C>T    2470T>C     2480C>T     2539_2542delAACT    2556C>T    2573_2574insC     2575C>A    2661G>A    2587_2590delGACT     2938C>T    2939G>A    2950G>C    3030G>G/A    3172A>C    3198C>G    3254T>C    3259_3260insGT     3201C>T    3277T>C    3288G>A    3318G>A    3384A>C    3491G>A    3582A>G    3584G>A    3609G>T     3790C>T    3828G>A    3835A>C    3853G>A     3877G>C     3887T>C    4042G>A    4044C>T    4045G>A     4115C>T    4125_4133dupGTGCCCACT    4388C>T     4401C>T    4481G>A    4535insT    *2A CYP2D7 gene conversion in intron 1    *2M CYP2D7 gene conversion in intron 1    *4N gene conversion to CYP2D7 in exon 9    *10D CYP2D7-like 3'-flanking region    *13 CYP2D7/2D6 hybrid gene structure    *14B/*21B -intron 1 conversion with CYP2D7 (214-245)    *31 CYP2D7 gene conversion in intron 1    *35B CYP2D7 conversion upstream of exon 1    *36 gene conversion to CYP2D7 in exon 9    *41 CYP2D7 gene conversion in intron 1    *51 CYP2D7 gene conversion in intron 1    *56A CYP2D7  gene conversion in intron 1    *57 gene conversion to CYP2D7 in exon 9    *58 CYP2D7 gene conversion in intron 1    *61 CYP2D7 seq from intron 7 onwards    *63/*73(are these the same?) intron 1 conversion with CYP2D7 (214-245)    more than 1 copy, unspecified - active gene_definitions    more than 1 copy: (N=2, 3, 4, 5 or 13)     *63 CYP2D7 sequence from exon 8 onwards
+gene    superclass    haplotype    rs1065852    rs16947    rs28371706    rs28371725    rs35742686    rs3892097    rs5030655    rs5030656    rs59421388    rs61736512    rs769258    rs28371696    rs5030862    rs28371703    rs28371704     rs1135822    rs1135823    rs28371710    rs1135824    rs5030866    rs28371717    rs5030867    rs28371733    rs1135840    rs72549357    rs78482768    2853A>C    -1770 G>A    '-1601_-1600GA>TT    -1584C>G    -1543 G>A    '-1426C>T     -1298G>A     -1258_-1257insAAAAA    -1253A>G    -1245_-1244insGA    -1238_-1237delAA     -1237_-1236insAA    -1235A>G    -1094_-1093insA    -1028T>C    -1011T>C     -1000G>A    -750_-749delGA    -740C>T    -695_-692delTGTG    -678G>A     -629A>G    -377A>G    '-175G>A    19G>A    73C>T    82C>T    125G>A     214G>C     221C>A     223C>G     227T>C    310G>T     601delC     746C>G     843T>G    883G>C    887C>T    957C>T    972C>T    997C>G    1013G>A    1039C>T    1062A>G    1494T>C    1513C>T    1598A>G    1608G>A     [tag]    1720A>C    1724C>T    1757C>T    rs5030865    1858C>T    1863_1864ins(TTTCGCCCC)    1863_1864ins(TTTCGCCCC)2    1869T>C    1887insTA    1943G>A    1973_1974insG    1978C>T    1979T>C    2097A>G    2129A>C    2291G>A    2303C>T    2470T>C     2480C>T     2539_2542delAACT    2556C>T    2573_2574insC     2575C>A    2661G>A    2587_2590delGACT     2938C>T    2939G>A    2950G>C    3030G>G/A    3172A>C    3198C>G    3254T>C    3259_3260insGT     3201C>T    3277T>C    3288G>A    3318G>A    3384A>C    3491G>A    3582A>G    3584G>A    3609G>T     3790C>T    3828G>A    3835A>C    3853G>A     3877G>C     3887T>C    4042G>A    4044C>T    4045G>A     4115C>T    4125_4133dupGTGCCCACT    4388C>T     4401C>T    4481G>A    4535insT    *2A CYP2D7 gene conversion in intron 1    *2M CYP2D7 gene conversion in intron 1    *4N gene conversion to CYP2D7 in exon 9    *10D CYP2D7-like 3'-flanking region    *13 CYP2D7/2D6 hybrid gene structure    *14B/*21B -intron 1 conversion with CYP2D7 (214-245)    *31 CYP2D7 gene conversion in intron 1    *35B CYP2D7 conversion upstream of exon 1    *36 gene conversion to CYP2D7 in exon 9    *41 CYP2D7 gene conversion in intron 1    *51 CYP2D7 gene conversion in intron 1    *56A CYP2D7  gene conversion in intron 1    *57 gene conversion to CYP2D7 in exon 9    *58 CYP2D7 gene conversion in intron 1    *61 CYP2D7 seq from intron 7 onwards    *63/*73(are these the same?) intron 1 conversion with CYP2D7 (214-245)    more than 1 copy, unspecified - active gene_definitions    more than 1 copy: (N=2, 3, 4, 5 or 13)     *63 CYP2D7 sequence from exon 8 onwards
 CYP2D6        *1    G    G    G    C    T    C    A    CTT    C    C    C    C    C    G    T    A    C    C    T    C    C    T    C    C    no ins    G    T    C    TC    G    C    G    C    no ins    T    no ins    no del    no ins    T    no ins    A    A    C    no del    G    no del    C    T    T    C    C    G    G    C    C    G    G    A    C    no del    G    A    C    G    G    G    G    C    G    T    A    G    T    C    C    T    G    G    C    G    no ins    no ins    A    no ins    C    no ins    G    A    T    T    C    G    A    G    no del    G    no ins    G    C    no del    G    C    C    C    T    G    A    no ins    G    A    C    C    T    C    T    C    C    G    C    T    C    C    A    C    G    C    G    no dup    G    G    C    no ins    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no
 CYP2D6    *1    *1XN    G    G    G    C    T    C    A    CTT    C    C    C    C    C    G    T    A    C    C    T    C    C    T    C    C    no ins    G    T    C    TC    G    C    G    C    no ins    T    no ins    no del    no ins    T    no ins    A    A    C    no del    G    no del    C    T    T    C    C    G    G    C    C    G    G    A    C    no del    G    A    C    G    G    G    G    C    G    T    A    G    T    C    C    T    G    G    C    G    no ins    no ins    A    no ins    C    no ins    G    A    T    T    C    G    A    G    no del    G    no ins    G    C    no del    G    C    C    C    T    G    A    no ins    G    A    C    C    T    C    T    C    C    G    C    T    C    C    A    C    G    C    G    no dup    G    G    C    no ins    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no
 CYP2D6    *1    *1A    G    G    G    C    T    C    A    CTT    C    C    C    C    C    G    T    A    C    C    T    C    C    T    C    C    no ins    G    T    C    TC    G    C    G    C    no ins    T    no ins    no del    no ins    T    no ins    A    A    C    no del    G    no del    C    T    T    C    C    G    G    C    C    G    G    A    C    no del    G    A    C    G    G    G    G    C    G    T    A    G    T    C    C    T    G    G    C    G    no ins    no ins    A    no ins    C    no ins    G    A    T    T    C    G    A    G    no del    G    no ins    G    C    no del    G    C    C    C    T    G    A    no ins    G    A    C    C    T    C    T    C    C    G    C    T    C    C    A    C    G    C    G    no dup    G    G    C    no ins    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no    no
@@ -494,7 +493,8 @@ for gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT',
  
 assay_allele_coverage = convert_nested_dd(assay_allele_coverage) # convert to native dictionary
           
-for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
+# TODO: for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
+for currently_processed_gene in ['UGT1A1']:
     
     print("Started processing data on " + currently_processed_gene)
     
@@ -519,56 +519,70 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
     thousand_genome_samples = convert_nested_dd(thousand_genome_samples) # convert to native dictionary
     
     print(''' 
-    
-    Task 1:
-    For different lists of SNPs covered by different assays, group alleles into indistinguishable allels.    
-    TODO: Compare that to alleles claimed to be discoverable by manufacturer.
-    
-    ''', file = output)
+
+Task 1:
+For different lists of SNPs covered by different assays, group alleles into indistinguishable allels.    
+TODO: Compare that to alleles claimed to be discoverable by manufacturer.
+
+''', file = output)
         
     for assay, covered_rsids in assay_rsid_coverage.items():
         print("\n\n** ASSAY:", assay, "**", file = output)
-        for gene, haplotypes in gene_definitions.items():
-            #print("GENE:", gene)
-            count_overlapping = 0
-            overlappling_haplotype_ids = set()
-            # Generate 'pruned' versions of the haplotypes that only contain rsids/SNPs covered by the specific assay (i.e., the intersection of rsids in the PharmGKB table and rsids covered by the assay)
-            pruned_haplotypes = dict()
-            for haplotype_id, haplotype in haplotypes.items():
-                pruned_haplotypes[haplotype_id] = {rsid: haplotype[rsid] for rsid in set(covered_rsids & haplotype.keys())}
-            #print(pruned_haplotypes)
-            for haplotype_id_1, haplotype_id_2 in itertools.combinations(pruned_haplotypes, 2):   
-                haplotype_1_snps = set(pruned_haplotypes[haplotype_id_1].items())
-                haplotype_2_snps = set(pruned_haplotypes[haplotype_id_2].items()) 
-                if haplotype_1_snps.issubset(haplotype_2_snps):
-                    #print(gene, ": ", str(haplotype_id_1), "is a subset of" + str(haplotype_id_2))
-                    count_overlapping += 1
-                    overlappling_haplotype_ids.add(haplotype_id_1)
-                    overlappling_haplotype_ids.add(haplotype_id_2)
-            print(gene, ":", len(overlappling_haplotype_ids), "haplotypes overlapping with at least one other haplotype found: ", overlappling_haplotype_ids, file = output)
-    
+        haplotypes = gene_definitions[currently_processed_gene]
+        
+        #print("GENE:", gene)
+        count_overlapping = 0
+        overlapping_haplotype_sets = list()
+        # generate 'pruned' versions of the haplotypes that only contain rsids/SNPs covered by the specific assay (i.e., the intersection of rsids in the PharmGKB table and rsids covered by the assay)
+        pruned_haplotypes = dict()
+        for haplotype_id, haplotype in haplotypes.items():
+            pruned_haplotypes[haplotype_id] = {rsid: haplotype[rsid] for rsid in set(covered_rsids & haplotype.keys())}
+            
+        # check all combinations of these pruned haplotype definitions for overlaps
+        for haplotype_id_1, haplotype_id_2 in itertools.combinations(pruned_haplotypes, 2):   
+            haplotype_1_snps = set(pruned_haplotypes[haplotype_id_1].items())
+            haplotype_2_snps = set(pruned_haplotypes[haplotype_id_2].items()) 
+            if haplotype_1_snps.issubset(haplotype_2_snps):
+                #count_overlapping += 1
+                found_existing_set_containing_at_least_one_of_the_overlapping_snps = False
+                
+                # iterate through list of overlapping haplotypes already found, if one haplotype_id in the overlapping pair is already part of a set of overlapping haplotypes, add the pair to this set
+                for i, val in enumerate(overlapping_haplotype_sets):
+                    if (haplotype_id_1 in val) or (haplotype_id_2 in val):
+                        overlapping_haplotype_sets[i].add(haplotype_id_1)
+                        overlapping_haplotype_sets[i].add(haplotype_id_2)
+                        found_existing_set_containing_at_least_one_of_the_overlapping_snps = True
+                if not found_existing_set_containing_at_least_one_of_the_overlapping_snps:
+                    overlapping_haplotype_sets.append({haplotype_id_1, haplotype_id_2})
+                    
+        print(len(overlapping_haplotype_sets), "set(s) of mutually indistinguishable haplotypes: ", overlapping_haplotype_sets, file = output)
+        print(len(pruned_haplotypes[haplotype_id_1].keys()), "rsids were used to define haplotypes for this gene", file = output)
+        rsids_covered_by_assay_and_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).intersection(set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys()))
+        print(len(rsids_covered_by_assay_and_found_in_samples), "out of these rsids are present in the 1000genomes samples:", rsids_covered_by_assay_and_found_in_samples, file = output)
+        rsids_covered_by_assay_but_not_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).difference(set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys()))   
+        print(len(rsids_covered_by_assay_but_not_found_in_samples), "out of these rsids are not present in the 1000genomes samples:", rsids_covered_by_assay_but_not_found_in_samples, "\n", file = output)
+
+            
     print(''' 
-    
-    Task 2:
-    For different lists of SNPs covered by different assays, calculate how many samples in 1000genomes would be assigned an allele 
-    that actually does not match the 'correct' allele ('correct' allele = the allele inferred based on 'hypothetical_assay_covering_all_rsids_in_pharmgkb'). 
-    TODO: Also generate statistics on inferred alleles, ethnicities etc.
-    
-    ''', file = output)
+
+Task 2:
+For different lists of SNPs covered by different assays, calculate how many samples in 1000genomes would be assigned an allele 
+that actually does not match the 'correct' allele ('correct' allele = the allele inferred based on 'hypothetical_assay_covering_all_rsids_in_pharmgkb'). 
+TODO: Also generate statistics on inferred alleles, ethnicities etc.
+
+''', file = output)
     
     # print(gene_definitions['VKORC1']['*1'])
     # print(thousand_genome_samples['HG00096']['VKORC1']['paternal_haplotype']['snps'])
     
     # for each type of assay
     for assay, covered_rsids in assay_rsid_coverage.items():
-        # print("\n\n** Assay:", assay, "**", file = output)
         # iterate through all 1000genome samples
         for sample, sample_data in thousand_genome_samples.items():
-            # print("Sample:", sample, file = output)
             # iterate through genes of each sample
             for gene, gene_data in sample_data.items():
-                # print("Gene:", gene, file = output)
-                # generate 'pruned' versions of the PharmGKB haplotypes (NOTE: this implemntation is a bit inefficient, since we are redundantly generating pruned haplotype definitions for each new sample...)
+                # generate 'pruned' versions of the PharmGKB haplotypes based on the limited set of rsids that can be obseverd by the assay
+                # TODO: the current implemntation is a bit inefficient, since we are redundantly generating pruned haplotype definitions for each new sample...
                 pruned_haplotypes = dict()
                 for haplotype_id, haplotype in gene_definitions[gene].items():
                     pruned_haplotypes[haplotype_id] = {rsid: haplotype[rsid] for rsid in set(covered_rsids & haplotype.keys() & gene_data['maternal_haplotype']['snps'].keys())}
@@ -601,22 +615,23 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
                                 print(gene_data[maternal_or_paternal_haplotype]['snps'])
                                   '''
     print('''
-    Task 3:
-    
-    Generate statistics; find potential problems with strand orientation used in PharmGKB tables
-    ''', file = output)
+Task 3:
+
+Generate statistics
+
+''', file = output)
                                 
     snp_frequency_data = AutoVivification()  #    for example: {  'rs1057910': {   'count_in_gene_definitions': {'A': 32, 'C': 2},
                                             #                                     'count_in_population_sample': {'A': 2091, 'C': 93}}}
        
-    for gene in gene_definitions: 
-        for haplotype_id in gene_definitions[gene]:
-            for rsid in gene_definitions[gene][haplotype_id]:
-                # this is quite unelegant because of the way the autovivification dictionary works (inexistant values do not default to 0)
-                if isinstance(snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[gene][haplotype_id][rsid]], int):
-                    snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[gene][haplotype_id][rsid]] += 1
-                else:
-                    snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[gene][haplotype_id][rsid]] = 1
+
+    for haplotype_id in gene_definitions[currently_processed_gene]:
+        for rsid in gene_definitions[currently_processed_gene][haplotype_id]:
+            # this is quite unelegant because of the way the autovivification dictionary works (inexistant values do not default to 0)
+            if isinstance(snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[currently_processed_gene][haplotype_id][rsid]], int):
+                snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[currently_processed_gene][haplotype_id][rsid]] += 1
+            else:
+                snp_frequency_data[rsid]['count_in_gene_definitions'][gene_definitions[currently_processed_gene][haplotype_id][rsid]] = 1
              
     for sample in thousand_genome_samples:
         for gene in thousand_genome_samples[sample]:
@@ -629,6 +644,8 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
     
     snp_frequency_data = convert_nested_dd(snp_frequency_data)                                                                                                        
     
+    
+    '''
     print("The following SNP variants are used in a gene definition, but were never observed in a sample, even though their rs number was tested for at least one sample (this can also be a hint for strand orientation mismatch):", file = output)
     for rsid in assay_rsid_coverage['hypothetical_assay_covering_all_rsids_in_pharmgkb']:
         for snp_variant in snp_frequency_data[rsid]['count_in_gene_definitions']:
@@ -636,6 +653,7 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
                 if snp_frequency_data[rsid].get('count_in_population_sample').get(snp_variant, 0) == 0:
                     print(rsid, snp_variant, file = output)
     print("---------")
+    '''
     
     
     # show alleles called 
@@ -664,3 +682,10 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
     # pp.pprint(thousand_genome_samples)
 
     f.close()                                
+    
+    
+    
+'''
+rsids_covered_by_assay_but_not_found_in_samples = covered_rsids - set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys())    
+print("\nThe following", len(rsids_covered_by_assay_but_not_found_in_samples), "rsids are covered by this assay, but are not present in the 1000genomes samples:", rsids_covered_by_assay_but_not_found_in_samples, file = output)
+'''        
