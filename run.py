@@ -129,10 +129,10 @@ TODO: Compare that to alleles claimed to be discoverable by manufacturer.
         #print("GENE:", gene)
         count_overlapping = 0
         overlapping_haplotype_sets = list()
-        # generate 'pruned' versions of the haplotypes that only contain rsids/SNPs covered by the specific assay (i.e., the intersection of rsids in the PharmGKB table and rsids covered by the assay)
+        # generate 'pruned' versions of the haplotypes that only contain rsids/SNPs covered by the specific assay (i.e., the intersection of rsids in the PharmGKB table and rsids covered by the assay), AS WELL AS BY 1000genomes DATASETS!
         pruned_haplotypes = dict()
         for haplotype_id, haplotype in haplotypes.items():
-            pruned_haplotypes[haplotype_id] = {rsid: haplotype[rsid] for rsid in set(covered_rsids & haplotype.keys())}
+            pruned_haplotypes[haplotype_id] = {rsid: haplotype[rsid] for rsid in set(covered_rsids & haplotype.keys() & rsids_in_1000genomes)}
             
         # check all combinations of these pruned haplotype definitions for overlaps
         for haplotype_id_1, haplotype_id_2 in itertools.combinations(pruned_haplotypes, 2):   
