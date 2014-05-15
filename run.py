@@ -18,16 +18,17 @@ gene_definitions = AutoVivification() # captures definitions of alleles/haplotyp
 assay_rsid_coverage = dict() # mapping assays to the rsids covered by each assay
 assay_allele_coverage = AutoVivification() # mapping assays to the alleles covered by each assay
 sample_rsid_coverage = set() # the rsids observed in the genetic sample data (1000genomes)
+mapping_of_1000genomes_record_to_population = dict()
 
 exemplary_1000genomes_record = 'HG00096' # a random pick among the 1000genome samples -- used to check which rsids are covered in the data and which are not
 
-assay_rsid_coverage['hypothetical_assay_covering_all_rsids_in_pharmgkb'] = set()
+assay_rsid_coverage['hypothetical_assay_covering_all_rsids_in_pharmgkb'] = set() # this will be filled later on based on data from PharmGBK
 assay_rsid_coverage['dmet_plus'] = set(line.strip() for line in open('data_about_assays/dmet_plus_rsids'))
 assay_rsid_coverage['florida_stanford_chip'] = set(line.strip() for line in open('data_about_assays/florida_stanford_chip_rsids'))
 assay_rsid_coverage['taqman'] = set(line.strip() for line in open('data_about_assays/taqman_rsids'))
 assay_rsid_coverage['veracode_adme_corepanel'] = set(line.strip() for line in open('data_about_assays/veracode_adme_corepanel_rsids'))
 
-list_of_assays = list(assay_rsid_coverage.keys())
+list_of_assays = ['hypothetical_assay_covering_all_rsids_in_pharmgkb', 'florida_stanford_chip', 'dmet_plus', 'taqman', 'veracode_adme_corepanel']
 
 haplotype_tables = dict()         
 for gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
@@ -45,7 +46,7 @@ for gene, table in haplotype_tables.items():
         else:
             line_array = line.split("\t")
             snps = {}
-            
+    
             rsid_start_at_column = 3    # from this column on, rsid data can be found (to the left, there is the name of the haplotype etc)
             for index, rsid in enumerate(header_array[rsid_start_at_column:]):
                 if (rsid[0:2] == "rs"):    # only add if this is an rs number and not some other identifier
@@ -77,6 +78,13 @@ for gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT',
                     assay_allele_coverage[header_array[i].strip()][gene.strip()][line_array[0].strip()] = cell.strip() # e.g., {'veracode_adme_corepanel': {'CYP2D6': {'*1': 'x'}}} 
  
 assay_allele_coverage = convert_nested_dd(assay_allele_coverage) # convert to native dictionary
+
+# read mapping between 1000genome records and populations
+for line in open('1000genomes/20130606_sample_info.txt'):
+    line_array = line.split("\t")
+    mapping_of_1000genomes_record_to_population[line_array[0]] = line_array[1]    # mapping from record ID to population
+    
+
          
 # TODO: for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
 for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
@@ -103,6 +111,8 @@ for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD'
                         thousand_genome_samples[str(call.sample)][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay] = set()
     
     thousand_genome_samples = convert_nested_dd(thousand_genome_samples) # convert to native dictionary
+    
+    rsids_in_1000genomes = set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys())
     
     print(''' 
 
@@ -143,11 +153,15 @@ TODO: Compare that to alleles claimed to be discoverable by manufacturer.
                     
         print(len(overlapping_haplotype_sets), "set(s) of mutually indistinguishable haplotypes: ", overlapping_haplotype_sets, file = output)
         print(len(pruned_haplotypes[haplotype_id_1].keys()), "rsids were used to define haplotypes for this gene", file = output)
-        rsids_covered_by_assay_and_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).intersection(set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys()))
+        
+        
+        # disabled the code below -- until now, we did not constraint haplotypes by presence in 1000genomes as well -- but now we do.
+        '''
+        rsids_covered_by_assay_and_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).intersection(rsids_in_1000genomes)
         print(len(rsids_covered_by_assay_and_found_in_samples), "out of these rsids are present in the 1000genomes samples:", rsids_covered_by_assay_and_found_in_samples, file = output)
-        rsids_covered_by_assay_but_not_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).difference(set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys()))   
+        rsids_covered_by_assay_but_not_found_in_samples = set(pruned_haplotypes[haplotype_id_1].keys()).difference(rsids_in_1000genomes)   
         print(len(rsids_covered_by_assay_but_not_found_in_samples), "out of these rsids are not present in the 1000genomes samples:", rsids_covered_by_assay_but_not_found_in_samples, "\n", file = output)
-
+        '''
             
     print(''' 
 
@@ -209,8 +223,6 @@ Generate statistics
                                 
     snp_frequency_data = AutoVivification()  #    for example: {  'rs1057910': {   'count_in_gene_definitions': {'A': 32, 'C': 2},
                                             #                                     'count_in_population_sample': {'A': 2091, 'C': 93}}}
-       
-
     for haplotype_id in gene_definitions[currently_processed_gene]:
         for rsid in gene_definitions[currently_processed_gene][haplotype_id]:
             # this is quite unelegant because of the way the autovivification dictionary works (inexistant values do not default to 0)
@@ -250,23 +262,21 @@ Generate statistics
     ''', file = output)
     
     # display header row
-    output_line = "sample" + "\t" + "gene" + "\t" + "maternal_or_paternal_haplotype"
+    output_line = "population" + "\t" + "sample" + "\t" + "gene" + "\t" + "maternal_or_paternal_haplotype"
     for assay in list_of_assays:
-        output_line = output_line + "\t" + assay
+        output_line = output_line + "\t" + assay + "\t Bogus calls from " + assay 
     print(output_line, file = output)    
     
     # display data     
     for sample in thousand_genome_samples:
-        for gene in thousand_genome_samples[sample]:
             for maternal_or_paternal_haplotype in ['maternal_haplotype', 'paternal_haplotype']:
-                output_line = sample + "\t" + gene + "\t" + maternal_or_paternal_haplotype
+                output_line = mapping_of_1000genomes_record_to_population[sample] + "\t" + sample + "\t" + currently_processed_gene + "\t" + maternal_or_paternal_haplotype
                 for assay in list_of_assays:
-                    output_line = output_line + "\t" + str(thousand_genome_samples[sample][gene][maternal_or_paternal_haplotype]['allele'][assay])
+                    output_line = output_line + "\t" + str(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay])
+                    output_line = output_line + "\t Bogus calls: " + str(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay].difference(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele']['hypothetical_assay_covering_all_rsids_in_pharmgkb']))
                 print(output_line, file = output)
                 #for assay in thousand_genome_samples[sample][gene][maternal_or_paternal_haplotype]['allele']:
                 # print(sample, gene, maternal_or_paternal_haplotype, assay, thousand_genome_samples[sample][gene][maternal_or_paternal_haplotype]['allele'][assay])
-    
-    
     
     pp = pprint.PrettyPrinter(indent=4, stream = output)
     pp.pprint(snp_frequency_data)
@@ -286,6 +296,7 @@ with open('output/overview.txt', 'w') as f:
           "rsids in hypothetical_assay_covering_all_rsids_in_pharmgkb that are not found in 1000genomes data:", file = f)
     print(rsids_in_pharmgkb_but_not_in_1000genomes, file = f)
     
+   
     
 '''
 rsids_covered_by_assay_but_not_found_in_samples = covered_rsids - set(thousand_genome_samples[exemplary_1000genomes_record][currently_processed_gene]['maternal_haplotype']['snps'].keys())    
