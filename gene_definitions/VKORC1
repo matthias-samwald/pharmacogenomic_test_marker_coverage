@@ -1,8 +1,8 @@
 gene	superclass	haplotype	rs9923231	rs17708472	rs9934438	rs2359612	rs7294	rs7196161	rs17880887	rs17881535	rs2884737	rs8050894
-VKORC1		*1	C	G	G	G	C	-	-	-	-	-
-VKORC1		*2	T [tag]	G	A [tag]	A [tag]	C	-	-	-	-	-
-VKORC1		*3	C	G	G	G	T [tag]	-	-	-	-	-
-VKORC1		*4	C	A [tag]	G	G	C	-	-	-	-	-
+VKORC1		*1	C	G	G	G	C					
+VKORC1		*2	T [tag]	G	A [tag]	A [tag]	C					
+VKORC1		*3	C	G	G	G	T [tag]					
+VKORC1		*4	C	A [tag]	G	G	C					
 VKORC1		H1	T [tag]	G	A	A	C	G	G	C	A	G
 VKORC1		H2	T [tag]	G	A	A	C	G	G	C	C	G
 VKORC1		H3	C	G	G	G	C	G	G	C	A	G

@@ -19,6 +19,9 @@ assay_rsid_coverage = dict() # mapping assays to the rsids covered by each assay
 assay_allele_coverage = AutoVivification() # mapping assays to the alleles covered by each assay
 sample_rsid_coverage = set() # the rsids observed in the genetic sample data (1000genomes)
 mapping_of_1000genomes_record_to_population = dict()
+population_to_superpopulation_mapping = dict()
+
+results_list = list() # list for capturing results of haplotype matching -- this is were the interesting data will be captured in
 
 exemplary_1000genomes_record = 'HG00096' # a random pick among the 1000genome samples -- used to check which rsids are covered in the data and which are not
 
@@ -84,10 +87,13 @@ for line in open('1000genomes/20130606_sample_info.txt'):
     line_array = line.split("\t")
     mapping_of_1000genomes_record_to_population[line_array[0]] = line_array[1]    # mapping from record ID to population
     
-
+# read mapping between populations and superpopulations
+for line in open('1000genomes/population_superpopulation_mapping.txt'):
+    line_array = line.split("\t")
+    population_to_superpopulation_mapping[line_array[0]] = line_array[2]
          
 # TODO: for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
-for currently_processed_gene in ['CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP3A5', 'DPYD', 'SLCO1B1', 'TPMT', 'UGT1A1', 'VKORC1']:
+for currently_processed_gene in ['VKORC1']:
     
     print("Started processing data on " + currently_processed_gene)
     
@@ -261,8 +267,10 @@ Generate statistics
     
     ''', file = output)
     
+    result_row_as_dictionary = dict()
+    
     # display header row
-    output_line = "population" + "\t" + "sample" + "\t" + "gene" + "\t" + "maternal_or_paternal_haplotype"
+    output_line = "superpopulation" + "\t" + "sample" + "\t" + "gene" + "\t" + "maternal_or_paternal_haplotype"
     for assay in list_of_assays:
         output_line = output_line + "\t" + assay + "\t Bogus calls from " + assay 
     print(output_line, file = output)    
@@ -270,7 +278,7 @@ Generate statistics
     # display data     
     for sample in thousand_genome_samples:
             for maternal_or_paternal_haplotype in ['maternal_haplotype', 'paternal_haplotype']:
-                output_line = mapping_of_1000genomes_record_to_population[sample] + "\t" + sample + "\t" + currently_processed_gene + "\t" + maternal_or_paternal_haplotype
+                output_line = population_to_superpopulation_mapping[mapping_of_1000genomes_record_to_population[sample]] + "\t" + sample + "\t" + currently_processed_gene + "\t" + maternal_or_paternal_haplotype
                 for assay in list_of_assays:
                     output_line = output_line + "\t" + str(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay])
                     output_line = output_line + "\t Bogus calls: " + str(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele'][assay].difference(thousand_genome_samples[sample][currently_processed_gene][maternal_or_paternal_haplotype]['allele']['hypothetical_assay_covering_all_rsids_in_pharmgkb']))
